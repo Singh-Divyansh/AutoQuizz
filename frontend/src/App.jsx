@@ -33,7 +33,7 @@ export default function App() {
     formData.append("formId", formId);
     
     try {
-      const response = await axios.post("autoquizz-production.up.railway.app/upload", formData);
+      const response = await axios.post("https://autoquizz-production.up.railway.app", formData);
       setQuestions(response.data.questions);
     } catch (error) {
       console.error("Upload failed:", error);
