@@ -6,7 +6,13 @@ const Tesseract = require("tesseract.js");
 const app = express();
 const port = 5000;
 
-app.use(cors());
+app.use(cors({
+  origin: "https://auto-quizz-kappa.vercel.app/", // Change this to your Vercel domain
+  methods: ["POST"],
+  allowedHeaders: ["Content-Type"],
+  credentials: true,
+}));
+
 app.use(express.json());
 
 const storage = multer.memoryStorage();
