@@ -7,11 +7,12 @@ const app = express();
 const port = 5000;
 
 app.use(cors({
-  origin: "https://auto-quizz-kappa.vercel.app/", // Change this to your Vercel domain
-  methods: ["POST"],
+  origin: "https://auto-quizz-kappa.vercel.app", // Remove trailing '/'
+  methods: ["POST", "GET"],
   allowedHeaders: ["Content-Type"],
   credentials: true,
 }));
+
 
 app.use(express.json());
 
