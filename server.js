@@ -7,7 +7,7 @@ const app = express();
 const port = 5000;
 
 app.use(cors({
-  origin: "https://auto-quizz-kappa.vercel.app", // Remove trailing '/'
+  origin: ["http://localhost:3000", "http://localhost:5173"], // Allow both local frontends
   methods: ["POST", "GET"],
   allowedHeaders: ["Content-Type"],
   credentials: true,
